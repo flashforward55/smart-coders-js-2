@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/19alexandr80/smart-coders-js.git"
+    "url": "git+https://github.com/flashforward55/smart-coders-js-2.git"
   },
   "keywords": [],
   "author": "smart-coders-js",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/19alexandr80/smart-coders-js/issues"
+    "url": "https://github.com/flashforward55/smart-coders-js-2/issues"
   },
   "dependencies": {
     "axios": "^1.4.0",
