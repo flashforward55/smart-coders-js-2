@@ -355,3 +355,9 @@
 .shop-list__links:hover {
   filter: $icon-hover-shadow;
 }
+
+// стилі для картинок магазинів
+
+.amazon-color {
+  filter: $amazon-color;
+}

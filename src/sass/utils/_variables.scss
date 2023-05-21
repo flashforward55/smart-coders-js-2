@@ -34,6 +34,10 @@
 
   --light-accent: #4f2ee8;
   --dark-accent: #eac645;
+
+  --light-color-amazom: grayscale(100%);
+  --dark-color-amazom: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg)
+    brightness(1000%) contrast(80%);
 }
 
 // CONSTANT COLORS //
@@ -98,3 +102,8 @@ $scroll-bgc-light: var(--light-scroll); //rgba(17, 17, 17, 0.6)
 $primary-brdr-clr-light: var(--light-brdr); //#ffffff
 
 $registration-modal-brdr-clr-light: var(--light-brdr-reg); //#f6f6f6;
+
+/* AMAZON COLORS */
+$amazon-color: var(
+  --light-color-amazom
+); //invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%);
