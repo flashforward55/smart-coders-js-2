@@ -1,11 +1,6 @@
 .container--home-page {
-  padding-top: 52px;
   @media screen and (min-width: 1440px) {
     display: flex;
-    padding-top: 72px;
-  }
-  @media (min-width: 768px) and (max-width: 1440px) {
-    padding-top: 72px;
   }
 }
 
@@ -118,14 +113,4 @@
   @media screen and (min-width: 1440px) {
     margin-bottom: 40px;
   }
-}
-
-// стилі для картинок магазинів
-
-.amazon-color {
-  filter: $amazon-color;
-  // filter: grayscale(100%); //світла тема
-
-  // filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%)
-  //   contrast(80%); //темна тема
 }
