@@ -232,12 +232,12 @@ function hideBooksWindow() {
 }
 
 // При таком разрешении єкрана будет зафиксирована категория "All categories"
-if (window.innerWidth < 768) {
+/* if (window.innerWidth < 768) {
   const liElement = document.querySelector('li[data-name="All categories"]');
   if (liElement) {
     liElement.classList.add('cat-list--fixed');
   }
-}
+} */
 
 // Функция предназначена для прокрутки элемента к определенной позиции на странице с использованием плавного скроллинга
 function handleScrollToElement(element, position = 'start') {
