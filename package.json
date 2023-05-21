@@ -2,7 +2,7 @@
   "name": "smart-coders-js-2",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://19alexandr80.github.io/smart-coders-js-2",
+  "homepage": "https://flashforward55.github.io/smart-coders-js-2/",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /smart-coders-js-2/"
