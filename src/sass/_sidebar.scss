@@ -87,21 +87,6 @@
   margin-left: 12px;
 }
 
-// .support-list {
-//   max-height: 188px;
-//   padding-left: 40px;
-//   margin-bottom: 16px;
-
-//   @media screen and (min-width: 768px) {
-//     max-height: 292px;
-//     margin-bottom: 32px;
-//   }
-
-//   @media screen and (min-width: 1440px) {
-//     margin-bottom: 40px;
-//   }
-// }
-
 .support-link {
   height: 32px;
   display: flex;
@@ -133,4 +118,13 @@
   @media screen and (min-width: 1440px) {
     margin-bottom: 40px;
   }
+}
+
+// стилі для картинок магазинів
+
+.amazon-color {
+  filter: grayscale(100%); //світла тема
+
+  filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%)
+    contrast(80%); //темна тема
 }
