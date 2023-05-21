@@ -25,6 +25,7 @@ function onThemLocal() {
     //---------------add
     document.body.style.setProperty('--light-accent', '#4f2ee8');
     document.body.style.setProperty('--light-brdr-reg', '#111111');
+    document.body.style.setProperty('--light-color-amazom', 'grayscale(100%)');
   } else {
     localStorage.setItem('them', 'dark');
     document.body.style.setProperty('--wayte', '#111111');
@@ -55,6 +56,10 @@ function onThemLocal() {
     //---------------add
     document.body.style.setProperty('--light-accent', '#eac645');
     document.body.style.setProperty('--light-brdr-reg', '#f6f6f6');
+    document.body.style.setProperty(
+      '--light-color-amazom',
+      'invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%)'
+    );
   }
 }
 function localThem() {
@@ -64,10 +69,7 @@ function localThem() {
 }
 localThem();
 
-
-
 const toggle = document.getElementById('toggle');
 toggle.onclick = () => {
   toggle.classList.toggle('active');
 };
-
