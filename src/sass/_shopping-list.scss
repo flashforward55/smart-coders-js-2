@@ -7,14 +7,17 @@
     display: flex;
   }
 }
+
 .shop-list__container {
   position: relative;
   padding-bottom: 40px;
   padding-top: 42px;
+
   @media screen and (min-width: 768px) {
     padding-bottom: 84px;
     padding-top: 62px;
   }
+
   @media screen and (min-width: 1440px) {
     padding-left: 40px;
     padding-top: 52px;
@@ -23,7 +26,7 @@
 
 .shop-list__title {
   // margin-left: 20px;
-  padding-top: 40px;
+  //padding-top: 40px;
 
   font-style: normal;
   font-weight: 700;
@@ -42,16 +45,20 @@
 .shop-list__span {
   color: $primary-accent-color;
 }
+
 .shop-list__cards {
   padding-top: 40px;
+
   // margin-left: 40px;
   @media screen and (min-width: 768px) {
     padding-top: 40px;
   }
+
   // @media screen and (min-width: 1440px) {
   //   min-height: 679px;
   // }
 }
+
 .shop-list__one-card {
   position: relative;
 
@@ -63,11 +70,13 @@
   border: 2px solid rgba(79, 46, 232, 0.4);
   border-radius: 16px;
   background: $secondary-bgc-light;
+
   @media screen and (min-width: 768px) {
     width: 704px;
     height: 213px;
     padding: 24px;
   }
+
   @media screen and (min-width: 1440px) {
     width: 996px;
     height: 213px;
@@ -77,6 +86,7 @@
 .shop-list__one-card:not(:last-child) {
   margin-bottom: 24px;
 }
+
 .shop-list__title-book {
   font-family: 'DM Sans';
   font-style: normal;
@@ -91,6 +101,7 @@
   text-transform: uppercase;
 
   color: $primary-brdr-clr-light;
+
   @media screen and (max-width: 368px) {
     text-overflow: ellipsis;
     max-width: 80px;
@@ -98,7 +109,9 @@
     font-size: 12px;
     display: flex;
   }
-  @media screen and (min-width: 369px), (max-width: 767px) {
+
+  @media screen and (min-width: 369px),
+  (max-width: 767px) {
     max-width: 144px;
     height: 18px;
 
@@ -117,6 +130,7 @@
     max-width: 808px;
   }
 }
+
 .shop-list__img {
   width: 100px;
   height: 142px;
@@ -130,6 +144,7 @@
     height: 165px;
   }
 }
+
 .shop-list__text-container {
   position: relative;
   overflow: hidden;
@@ -138,9 +153,12 @@
   flex-direction: column;
   padding-left: 14px;
   max-width: 193px;
-  @media screen and (min-width: 320px), (max-width: 368px) {
+
+  @media screen and (min-width: 320px),
+  (max-width: 368px) {
     max-width: 171px;
   }
+
   @media screen and (min-width: 768px) {
     padding-left: 24px;
     max-width: 808px;
@@ -158,7 +176,9 @@
   letter-spacing: 0.03;
 
   color: $secondary-txt-clr;
-  @media screen and (min-width: 320px), (max-width: 368px) {
+
+  @media screen and (min-width: 320px),
+  (max-width: 368px) {
     max-width: 126px;
   }
 }
@@ -195,6 +215,7 @@
     white-space: nowrap;
   }
 }
+
 // .shop-list__descr {
 //   @media screen and (min-width: 320), (max-width: 368) {
 //     width: 100%;
@@ -219,9 +240,12 @@
   letter-spacing: -0.04;
 
   color: $secondary-txt-clr;
-  @media screen and (min-width: 320px), (max-width: 368px) {
+
+  @media screen and (min-width: 320px),
+  (max-width: 368px) {
     bottom: 30px;
   }
+
   @media screen and (min-width: 368px) {
     bottom: 14px;
   }
@@ -299,6 +323,7 @@
     font-size: 18px;
     width: 349px;
   }
+
   // font-weight: 400;
   // font-size: 18px;
   // line-height: 1.3;
@@ -306,11 +331,13 @@
   // letter-spacing: 0.02em;
   // color: rgba(0, 0, 0, 0.6);
 }
+
 .imgEmptyPage {
   height: auto;
   margin-top: 14px;
   max-width: 322px;
   justify-content: center;
+
   @media screen and (min-width: 768px) {
     font-size: 20px;
   }
@@ -327,6 +354,7 @@
 
   width: 80px;
   height: 16px;
+
   @media screen and (min-width: 768px) {
     width: 140px;
     height: 30px;
@@ -354,10 +382,4 @@
 
 .shop-list__links:hover {
   filter: $icon-hover-shadow;
-}
-
-// стилі для картинок магазинів
-
-.amazon-color {
-  filter: $amazon-color;
 }
