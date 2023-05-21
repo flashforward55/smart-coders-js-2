@@ -185,7 +185,6 @@ function makeMarkupCategoryShelf(data, nameCategory) {
   `;
 
   refs.bestsellersSectionEl.innerHTML = shelfMarkup;
-  //const openModal = document.querySelector('.bookshelf');
   openModalEl.addEventListener('click', openModalEvent);
 }
 
