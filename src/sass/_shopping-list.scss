@@ -110,8 +110,7 @@
     display: flex;
   }
 
-  @media screen and (min-width: 369px),
-  (max-width: 767px) {
+  @media screen and (min-width: 369px), (max-width: 767px) {
     max-width: 144px;
     height: 18px;
 
@@ -154,8 +153,7 @@
   padding-left: 14px;
   max-width: 193px;
 
-  @media screen and (min-width: 320px),
-  (max-width: 368px) {
+  @media screen and (min-width: 320px), (max-width: 368px) {
     max-width: 171px;
   }
 
@@ -177,8 +175,7 @@
 
   color: $secondary-txt-clr;
 
-  @media screen and (min-width: 320px),
-  (max-width: 368px) {
+  @media screen and (min-width: 320px), (max-width: 368px) {
     max-width: 126px;
   }
 }
@@ -241,8 +238,7 @@
 
   color: $secondary-txt-clr;
 
-  @media screen and (min-width: 320px),
-  (max-width: 368px) {
+  @media screen and (min-width: 320px), (max-width: 368px) {
     bottom: 30px;
   }
 
@@ -382,4 +378,10 @@
 
 .shop-list__links:hover {
   filter: $icon-hover-shadow;
+}
+
+// стилі для картинок магазинів
+
+.amazon-color {
+  filter: $amazon-color;
 }
