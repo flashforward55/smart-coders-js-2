@@ -1,5 +1,6 @@
 .backdrop {
   position: fixed;
+  z-index: 9991;
   top: 0;
   left: 0;
   width: 100%;
@@ -19,18 +20,26 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 335;
-  height: auto;
+  // width: 335;
+  // height: auto;
+  // width: 100%;
+  min-width: 335px;
+  // min-height: 662px;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding: 40px 24px;
   background: $secondary-bgc-light;
-  border: 2px solid $secondary-bgc-dark;
+  border: 2px solid $primary-txt-clr-light;
   border-radius: 18px;
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid $primary-txt-clr-light;
+
 
   @media screen and (min-width: 768px) {
-    width: 579px;
-    height: auto;
+    max-width: 579px;
+    min-height: 465px;
+    // width: 579px;
+    // height: auto;
     padding: 40px;
   }
 }
@@ -38,8 +47,6 @@
 .close-icon {
   width: 28px;
   height: 28px;
-
-  // stroke: $secondary-bgc-dark;
   fill: $primary-txt-clr-light;
   cursor: pointer;
 
