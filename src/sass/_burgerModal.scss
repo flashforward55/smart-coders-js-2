@@ -5,6 +5,10 @@
   z-index: 3;
   transition: 0.3s;
   // background: $gradient-bgc;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .modal-burger-menu-off {
   transform: translateX(-100%);
