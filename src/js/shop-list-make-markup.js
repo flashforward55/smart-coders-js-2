@@ -7,33 +7,9 @@ import bookShop from '../images/shops/books@1x.png';
 import bookShop2x from '../images/shops/books@2x.png';
 
 export const refs = {
-  // shopListContainer: document.querySelector('.shop-list__container'), //!!!!!
   container: document.querySelector('.shop-list__empty-page'),
   cards: document.querySelector('.shop-list__cards'),
 };
-
-// export function onOpenPage(dataBookRender) {
-//   // якщо в local storage немає жодної книги, малюється розмітка пустої сторінки
-//   console.log('onOpenPage()', Object.values(dataBookRender).length); //!!!!!!!!!
-
-//   if (!dataBookRender) {
-//     refs.cards.classList.add('visually-hidden');
-//     refs.container.innerHTML = `
-//   <div class="shop-list__empty-page">
-//   <p class="textEmptyPage">
-//     This page is empty, add some books and proceed to order.
-//   </p>
-//   <img class="imgEmptyPage" src="./images/is-empty@2x.png" alt="" />
-// </div>`;
-//   }
-
-//   // якщо в local storage є хоча б одна книга, стираєтьсч розмітка пустої сторінки і малюється розмітка книги
-//   else {
-//     refs.container.remove();
-//     // makeMarkupBook(dataBookRender);
-//   }
-
-// }
 
 export function makeMarkupBook(dataBookRender) {
   refs.cards.classList.remove('visually-hidden');
