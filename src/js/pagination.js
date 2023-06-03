@@ -6,7 +6,6 @@ import {
   quantityPages,
   getNewDataBatch,
   getNewQuantityPages,
-  newLastPage,
 } from './local-storage';
 
 Notify.init({
@@ -51,6 +50,10 @@ const callback = function (mutationsList) {
     if (mutation.type === 'childList') {
       const element = document.getElementById('current');
 
+      if (!element) {
+        return;
+      }
+
       currentPage = Number(element.textContent);
     }
   }
@@ -58,18 +61,9 @@ const callback = function (mutationsList) {
 
 const observer = new MutationObserver(callback);
 
-// if (!document.getElementById('current')) {
-//   observer.disconnect();
-// } //!!!!!!!!!!!!!!!!!!!!!!!!!
-
 const config = { childList: true, subtree: true };
 
 observer.observe(paginationCenter, config);
-
-// if (!document.getElementById('current')) {
-//   observer.unobserve(paginationCenter);
-//   observer.disconnect();
-// } //!!!!!!!!!!!!!!!!!!!!!!!!!
 
 //! =====================================================
 
@@ -79,31 +73,21 @@ paginationCenter.addEventListener('click', handlerPaginationCenter);
 function handlerPaginationCenter(evt) {
   if (!evt.target.classList.contains('js-pag-marker')) {
     if (evt.target.classList.contains('btn-pag--more-left')) {
-      page = currentPage - 3;
-
       lastPage = getNewQuantityPages();
-      if (lastPage < 3) {
-        observer.disconnect();
-      }
+      page = currentPage - 3;
 
       getPaginationPage(page, lastPage);
     }
 
     if (evt.target.classList.contains('btn-pag--more-right')) {
       if (currentPage <= lastPage - 3) {
-        page = currentPage + 3;
         lastPage = getNewQuantityPages();
-        if (lastPage < 3) {
-          observer.disconnect();
-        }
+        page = currentPage + 3;
 
         getPaginationPage(page, lastPage);
       } else {
-        page = lastPage;
         lastPage = getNewQuantityPages();
-        if (lastPage < 3) {
-          observer.disconnect();
-        }
+        page = lastPage;
 
         getPaginationPage(page, lastPage);
       }
@@ -113,16 +97,8 @@ function handlerPaginationCenter(evt) {
   }
 
   lastPage = getNewQuantityPages();
-  if (lastPage < 3) {
-    observer.disconnect();
-  } //!!!!!!!!!!!!!!!!!!!!!!!!!
-
   page = Number(evt.target.textContent);
 
-  lastPage = getNewQuantityPages();
-  if (lastPage < 3) {
-    observer.disconnect();
-  }
   getPaginationPage(page, lastPage);
 }
 
@@ -143,12 +119,9 @@ function handlerPaginationLeft(evt) {
       return;
     }
 
+    lastPage = getNewQuantityPages();
     page = 1;
 
-    lastPage = getNewQuantityPages();
-    if (lastPage < 3) {
-      observer.disconnect();
-    }
     getPaginationPage(page, lastPage);
   }
 
@@ -161,12 +134,9 @@ function handlerPaginationLeft(evt) {
       return;
     }
 
+    lastPage = getNewQuantityPages();
     page = currentPage - 1;
 
-    lastPage = getNewQuantityPages();
-    if (lastPage < 3) {
-      observer.disconnect();
-    }
     getPaginationPage(page, lastPage);
   }
 }
@@ -187,10 +157,8 @@ function handlerPaginationRight(evt) {
     }
 
     lastPage = getNewQuantityPages();
-    if (lastPage < 3) {
-      observer.disconnect();
-    }
     page = lastPage;
+
     getPaginationPage(page, lastPage);
   }
 
@@ -202,10 +170,8 @@ function handlerPaginationRight(evt) {
     }
 
     lastPage = getNewQuantityPages();
-    if (lastPage < 3) {
-      observer.disconnect();
-    }
     page = currentPage + 1;
+
     getPaginationPage(page, lastPage);
   }
 }
