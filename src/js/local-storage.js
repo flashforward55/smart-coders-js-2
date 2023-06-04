@@ -1,6 +1,6 @@
 import { refs } from './shop-list-make-markup.js';
 import { makeMarkupBook } from './shop-list-make-markup.js';
-// import { onOpenPage } from './shop-list-make-markup.js'; //!!!!!!!!!!!!!!!!!!!!????
+
 import { createPaginataionBtn, createPaginataion } from './pagination-btn.js';
 
 let subarray = [];
@@ -65,7 +65,7 @@ export function getData() {
   return quantityPages;
 }
 
-getNewQuantityPages(); //!!!!!!!!!!!!!!!!!!!!!!!!!
+getNewQuantityPages();
 export function getNewQuantityPages(quantityPages) {
   const newLastPage = getData();
 
@@ -89,6 +89,6 @@ function onBtnTrashClick(e) {
   const id = e.target.closest('button').dataset.id;
 
   getData();
-  //  dataFirebase.deleteBook(id);
+
   // window.location.reload();
 }
